@@ -1,0 +1,335 @@
+@import 'normalize'
+
+azulito = #3498db
+azulote = #2980b9
+
+//Mixins
+border-radius(n)
+	-webkit-border-radius n
+	-moz-border-radius n
+	-ms-border-radius n
+	-o-border-radius n
+	border-radius n
+
+html
+	font-size 16px
+
+body
+	color #333
+	font-family 'Lato', sans-serif
+	
+	
+a	
+	text-decoration none
+		
+		
+.title
+	font-size 3rem
+	color #000
+	margin 0
+	
+.button
+	display inline-block
+	border 4px solid azulito
+	border-radius(5px)
+	padding 10px 20px
+	
+	&:hover
+		text-decoration none
+	
+.hipster-line
+	display block
+	margin 0 auto
+	width 110px
+	height 4px
+	background azulito
+
+
+.header
+	padding 60px 0 130px 0
+	text-align center
+	background url(../img/header.jpg) no-repeat
+	background-size cover
+	background-attachment fixed
+	position relative
+	
+	.container-fluid
+		
+		.row
+			
+			.col-xs-12
+				
+				.navbar
+					text-align left
+					position relative
+					
+					.burger
+						font-size 2.5rem
+						margin-left 20px
+						position absolute
+						top -30px
+						color #FFF
+						transition color 0.3s
+						
+						&:hover
+							color azulito
+					
+					.social-menu
+						display none
+						list-style none
+						position absolute
+						left 80px
+						top -22px
+						margin 0
+						padding 0
+						
+						li
+							display inline-block
+							
+							&:nth-child(2)
+								margin 0 20px
+							
+							a
+								color #FFF
+								font-size 1.8rem
+								transition color 0.3s
+								
+								&:hover
+									color azulito
+									text-decoration none
+								
+								i
+									margin-right 8px
+
+				.hello
+					color #FFF
+					margin-top 75px
+					
+					h1
+						font-size 5.5rem
+						margin 0
+						font-weight 400
+					
+					h3
+						font-size 2.8rem
+						margin 0
+						font-weight 400
+						
+					.hipster-line
+						margin 20px auto 0 auto
+						
+					
+					.button
+						color #FFF
+						margin-top 80px
+						font-size 1.5rem
+						font-weight 400
+						transition all 0.3s
+						
+						&:hover
+							background azulito
+							color #FFF
+						
+.skills
+	text-align center
+	padding 70px 0
+	
+	.container-fluid
+		width 85%
+		
+		.row
+			
+			.skill
+				display inline-block
+				margin-top 60px
+		
+				
+				.img-skill
+					display inline-block
+					margin 0
+					width 128px
+					height 128px
+					
+					img
+						width 100%
+						height 100%
+				
+				.title-skill
+					font-size 2rem
+					margin 25px 0 0 0
+					
+				.hipster-line
+					width 50px
+					height 3px
+					margin 10px auto
+					
+				.text-skill
+					padding 0 20px
+					font-size 1rem
+					
+.work
+	text-align center
+	padding 70px 0
+	background #F2F3F5
+	
+	.container-fluid
+		width 85%
+		
+		.row
+			
+			.title
+				margin-bottom 20px
+			
+			.hipster-line
+				width 90px
+
+			.project
+				margin 2.5rem 0 1.2rem 0
+				padding 0
+				
+				.content
+					width 90%
+					margin 0 auto
+					position relative
+					overflow hidden
+				
+
+					.img-project
+						margin 0
+						width 100%
+						height 100%
+						
+						img
+							width 100%
+							height 100%
+							
+					&:hover
+						
+						.gradient
+							transform translateY(0%)
+							
+					.gradient
+						display block
+						padding 0 30px
+						position absolute
+						height 80px
+						line-height 80px
+						left 0
+						right 0
+						bottom 0
+						background rgba(52, 152, 219,0.9)
+						color #FFF
+						transform translateY(100%)
+						transition transform 0.3s
+						
+
+						span
+							float left
+							font-size 1.5rem
+						
+						.social
+							margin 0
+							padding 0
+							list-style none
+							float right
+							color #FFF
+							font-size 2rem 
+							
+							li
+								display inline-block
+								
+								&:first-child
+									margin-right 10px
+								
+								a
+									color #FFF
+						
+
+
+.contact
+	text-align center
+	padding 70px 0
+	
+	.container-fluid
+		
+		.row
+			
+			.hipster-line
+				width 90px
+				margin-top 20px
+				
+			.contact-text
+				display block
+				margin 20px auto
+				font-size 1.1rem
+				max-width 600px
+				
+			.button
+				background azulito
+				margin-top 10px
+				color #FFF
+				font-size 1.2rem
+				font-weight 300
+				
+				i 
+					margin-right 10px
+					
+
+footer
+	padding 50px 0
+	text-align center
+	background #333
+	color #FFF
+	
+	.container-fluid
+		
+		.row
+			
+			.social-list
+				list-style none
+				margin 0
+				padding 0
+				
+				li
+					display inline-block
+					position relative
+					transition transform 0.2s
+					
+					&:hover
+						transform translateY(-5px)
+					
+					&:nth-child(2)
+						margin 0 30px
+					
+					a
+						color #FFF
+						font-size 2.2rem
+			
+			.copy
+				display inline-block
+				margin-top 20px
+				font-size 0.9rem
+
+
+@media screen and (max-width: 568px)
+	html
+		font-size 12px
+	
+	.header
+		
+		.container-fluid
+			
+			.row
+				
+				.col-xs-12
+								
+					.hello
+						
+						h1
+							font-size 3.5rem
+							margin 0
+							font-weight 400
+						
+						h3
+							font-size 1.8rem
+						
